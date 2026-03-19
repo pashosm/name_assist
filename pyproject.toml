@@ -1,0 +1,11 @@
+[project]
+name = "name_assist"
+version = "0.1.0"
+description = "Baby name discovery app powered by SSA data and Claude AI"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.30",
+    "pandas>=2.0",
+    "anthropic>=0.40",
+    "requests>=2.31",
+]
