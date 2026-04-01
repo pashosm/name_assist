@@ -22,7 +22,8 @@ def _download_zip() -> None:
     if ZIP_PATH.exists():
         return
     print("Downloading SSA baby names data...")
-    resp = requests.get(SSA_URL, timeout=120)
+    headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"}
+    resp = requests.get(SSA_URL, headers=headers, timeout=120)
     resp.raise_for_status()
     ZIP_PATH.write_bytes(resp.content)
     print("Download complete.")
